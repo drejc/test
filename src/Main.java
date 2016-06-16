@@ -8,4 +8,8 @@ public class Main {
     public String someSampleCode(String code) {
         return code + "::";
     }
+
+    public void nothing() {
+
+    }
 }
