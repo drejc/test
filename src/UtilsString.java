@@ -9,15 +9,31 @@ import java.util.regex.Pattern;
 public final class UtilsString {
 
 	/**
-	 * Checks if string is null, empty or contains only spaces
+	 * Compares two strings with <code>String.compare()</code>. Method allows
+	 * <code>null</code> values.
 	 *
-	 * @param value string to test
-	 * @return <code>true</code> if <code>null</code>, empty or spaces only,
-	 * <code>false</code> otherwise.
+	 * @param one to compare
+	 * @param two to compare
+	 * @return <b>0</b> if both <code>null</code>, <b>-1</b> if <code>one</code>
+	 * is <code>null</code>, <b>1</b> if <code>two</code> is
+	 * <code>null</code>, otherwise <code>String.compare()</code> is
+	 * called
 	 */
-	public static boolean isNullOrEmptyTrimmed(String value) {
+	public static int compare(String one, String two) {
 
-		return (value == null || value.trim().length() == 0);
+		if (two == null && one == null) {
+			return 0;
+		}
+
+		if (two == null) {
+			return -1;
+		}
+
+		if (one == null) {
+			return 1;
+		}
+
+		return two.compareTo(one);
 	}
 
 	/**
@@ -34,15 +50,15 @@ public final class UtilsString {
 	}
 
 	/**
-	 * Checks if string is <code>null</code> or <code>empty == ""</code>
+	 * Checks if string is null, empty or contains only spaces
 	 *
 	 * @param value string to test
-	 * @return <code>true</code> if <code>null</code> or empty,
+	 * @return <code>true</code> if <code>null</code>, empty or spaces only,
 	 * <code>false</code> otherwise.
 	 */
-	public static boolean isNullOrEmpty(String value) {
+	public static boolean isNullOrEmptyTrimmed(String value) {
 
-		return (value == null || value.length() == 0);
+		return (value == null || value.trim().length() == 0);
 	}
 
 	/**
@@ -75,31 +91,15 @@ public final class UtilsString {
 	}
 
 	/**
-	 * Compares two strings with <code>String.compare()</code>. Method allows
-	 * <code>null</code> values.
+	 * Checks if string is <code>null</code> or <code>empty == ""</code>
 	 *
-	 * @param two to compare
-	 * @param one to compare
-	 * @return <b>0</b> if both <code>null</code>, <b>-1</b> if <code>one</code>
-	 * is <code>null</code>, <b>1</b> if <code>two</code> is
-	 * <code>null</code>, otherwise <code>String.compare()</code> is
-	 * called
+	 * @param value string to test
+	 * @return <code>true</code> if <code>null</code> or empty,
+	 * <code>false</code> otherwise.
 	 */
-	public static int compare(String two, String one) {
+	public static boolean isNullOrEmpty(String value) {
 
-		if (one == null && two == null) {
-			return 0;
-		}
-
-		if (one == null) {
-			return -1;
-		}
-
-		if (two == null) {
-			return 1;
-		}
-
-		return one.compareTo(two);
+		return (value == null || value.length() == 0);
 	}
 
 	/**
