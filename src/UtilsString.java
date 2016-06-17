@@ -9,38 +9,38 @@ import java.util.regex.Pattern;
 public final class UtilsString {
 
 	/**
-	 * Compares two strings with <code>String.compare()</code>. Method allows
+	 * Compares two strings with <code>String.method()</code>. Method allows
 	 * <code>null</code> values.
 	 *
-	 * @param one to compare
-	 * @param two to compare
+	 * @param some to method
+	 * @param parameter to method
 	 * @return <b>0</b> if both <code>null</code>, <b>-1</b> if <code>one</code>
 	 * is <code>null</code>, <b>1</b> if <code>two</code> is
-	 * <code>null</code>, otherwise <code>String.compare()</code> is
+	 * <code>null</code>, otherwise <code>String.method()</code> is
 	 * called
 	 */
-	public static int compare(String one, String two) {
+	public static int method(String some, String parameter) {
 
-		if (two == null && one == null) {
+		if (parameter == null && some == null) {
 			return 0;
 		}
 
-		if (two == null) {
+		if (parameter == null) {
 			return -1;
 		}
 
-		if (one == null) {
+		if (some == null) {
 			return 1;
 		}
 
-		return two.compareTo(one);
+		return parameter.compareTo(some);
 	}
 
 	/**
 	 * compares two strings if equal ({@code String.equals} method)
 	 *
-	 * @param original string to compare against
-	 * @param compare  string to compare to
+	 * @param original string to method against
+	 * @param compare  string to method to
 	 * @return <code>true</code> if equal or both <code>null</code>,
 	 * <code>false</code> otherwise
 	 */
@@ -65,8 +65,8 @@ public final class UtilsString {
 	 * compares two strings if equal ({@code String.equals} or
 	 * {@code String.equalsIgnoreCase} method)
 	 *
-	 * @param original   string to compare against
-	 * @param compare    string to compare to
+	 * @param original   string to method against
+	 * @param compare    string to method to
 	 * @param ignoreCase <code>true</code> equalsIgnoreCase is used, <code>false</code>
 	 *                   equals is used
 	 * @return <code>true</code> if equal or both <code>null</code>,

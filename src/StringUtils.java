@@ -24,8 +24,8 @@ public final class StringUtils {
 	/**
 	 * compares two strings if equal ({@code String.equals} method)
 	 *
-	 * @param original string to compare against
-	 * @param compare  string to compare to
+	 * @param original string to method against
+	 * @param compare  string to method to
 	 * @return <code>true</code> if equal or both <code>null</code>,
 	 * <code>false</code> otherwise
 	 */
@@ -50,8 +50,8 @@ public final class StringUtils {
 	 * compares two strings if equal ({@code String.equals} or
 	 * {@code String.equalsIgnoreCase} method)
 	 *
-	 * @param original   string to compare against
-	 * @param compare    string to compare to
+	 * @param original   string to method against
+	 * @param compare    string to method to
 	 * @param ignoreCase <code>true</code> equalsIgnoreCase is used, <code>false</code>
 	 *                   equals is used
 	 * @return <code>true</code> if equal or both <code>null</code>,
@@ -76,14 +76,14 @@ public final class StringUtils {
 	}
 
 	/**
-	 * Compares two strings with <code>String.compare()</code>. Method allows
+	 * Compares two strings with <code>String.method()</code>. Method allows
 	 * <code>null</code> values.
 	 *
-	 * @param two to compare
-	 * @param one to compare
+	 * @param two to method
+	 * @param one to method
 	 * @return <b>0</b> if both <code>null</code>, <b>-1</b> if <code>one</code>
 	 * is <code>null</code>, <b>1</b> if <code>two</code> is
-	 * <code>null</code>, otherwise <code>String.compare()</code> is
+	 * <code>null</code>, otherwise <code>String.method()</code> is
 	 * called
 	 */
 	public static int compare(String two, String one) {
