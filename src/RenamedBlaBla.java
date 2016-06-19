@@ -1,9 +1,9 @@
 /**
  *
  */
-public class BlaBla {
+public class RenamedBlaBla {
 
-	public static int compare(String one, String two) {
+	public static int kompare(String one, String two) {
 
 		if (two == null && one == null) { return 0; }
 
