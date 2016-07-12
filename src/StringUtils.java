@@ -22,17 +22,11 @@ public final class StringUtils {
 	 */
 	public static int compare(String two, String one) {
 
-		if (one == null && two == null) {
-			return 0;
-		}
+		if (one == null && two == null) { return 0; }
 
-		if (one == null) {
-			return -1;
-		}
+		if (one == null) { return -1; }
 
-		if (two == null) {
-			return 1;
-		}
+		if (two == null) { return 1; }
 
 		return one.compareTo(two);
 	}
