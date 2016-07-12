@@ -10,15 +10,31 @@ public final class StringUtils {
 	}
 
 	/**
-	 * Checks if string is null, empty or contains only spaces
+	 * Compares two strings with <code>String.method()</code>. Method allows
+	 * <code>null</code> values.
 	 *
-	 * @param value string to test
-	 * @return <code>true</code> if <code>null</code>, empty or spaces only,
-	 * <code>false</code> otherwise.
+	 * @param two to method
+	 * @param one to method
+	 * @return <b>0</b> if both <code>null</code>, <b>-1</b> if <code>one</code>
+	 * is <code>null</code>, <b>1</b> if <code>two</code> is
+	 * <code>null</code>, otherwise <code>String.method()</code> is
+	 * called
 	 */
-	public static boolean isNullOrEmptyTrimmed(String value) {
+	public static int compare(String two, String one) {
 
-		return (value == null || value.trim().length() == 0);
+		if (one == null && two == null) {
+			return 0;
+		}
+
+		if (one == null) {
+			return -1;
+		}
+
+		if (two == null) {
+			return 1;
+		}
+
+		return one.compareTo(two);
 	}
 
 	/**
@@ -76,31 +92,15 @@ public final class StringUtils {
 	}
 
 	/**
-	 * Compares two strings with <code>String.method()</code>. Method allows
-	 * <code>null</code> values.
+	 * Checks if string is null, empty or contains only spaces
 	 *
-	 * @param two to method
-	 * @param one to method
-	 * @return <b>0</b> if both <code>null</code>, <b>-1</b> if <code>one</code>
-	 * is <code>null</code>, <b>1</b> if <code>two</code> is
-	 * <code>null</code>, otherwise <code>String.method()</code> is
-	 * called
+	 * @param value string to test
+	 * @return <code>true</code> if <code>null</code>, empty or spaces only,
+	 * <code>false</code> otherwise.
 	 */
-	public static int compare(String two, String one) {
+	public static boolean isNullOrEmptyTrimmed(String value) {
 
-		if (one == null && two == null) {
-			return 0;
-		}
-
-		if (one == null) {
-			return -1;
-		}
-
-		if (two == null) {
-			return 1;
-		}
-
-		return one.compareTo(two);
+		return (value == null || value.trim().length() == 0);
 	}
 
 	/**
