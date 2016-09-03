@@ -28,6 +28,7 @@ public final class StringUtils {
 
 		if (two == null) { return 1; }
 
+		// branch
 		return one.compareTo(two);
 	}
 
